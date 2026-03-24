@@ -1,6 +1,19 @@
 /*  */
 /*  */
 /*  */
+.btnEl {
+  display: flex;
+  justify-content: right;
+}
+.imgEl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardEl {
+  display: flex;
+  justify-content: center;
+}
 .formEl,
 .navEl {
   display: flex;

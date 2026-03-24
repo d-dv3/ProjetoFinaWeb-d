@@ -1,12 +1,47 @@
-/* INVESTIGATE DARK MODE/ LIGHT MODE */
-/* :root {
-  color-scheme: light dark;
+/*  */
+/*  */
+/*  */
+.formEl,
+.navEl {
+  display: flex;
+  justify-content: space-between;
 }
-body {
-  color: light-dark(#333b3c, #efefec);
-  background-color: light-dark(#efedea, #223a2c);
-} */
+/* ── pill toggle button ── */
+#themeToggle {
+  width: 3rem;
+  height: 1.65rem;
+  border-radius: 50px;
+  border: 2px solid var(--bs-border-color);
+  background: var(--bs-body-bg);
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
 
+#themeToggle .knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  background: var(--bs-primary);
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.25s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  color: #fff;
+}
+
+[data-bs-theme="dark"] #themeToggle .knob {
+  transform: translateX(1.3rem);
+}
+/*  */
+/*  */
+/*  */
 .cardImg {
   height: 150px;
 }

@@ -57,18 +57,25 @@
       <!-- img 3col: 286/ 150 -->
       <div class="row">
         <div class="col-8">
-          <p>
+          <ul>
+            <li><p>
             Sou a <span class="nome">diana</span> - estou a estudar low code na cesae
-          </p>
-          <p class="frase">
-            frase de apresentação</p>
-          <p>
+          </p></li>
+            <li  class="novaFrase"><p>
+            frase de apresentação</p></li>
+            <li><p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae corrupti dignissimos tenetur sit debitis sed, vitae accusamus dolorem quibusdam consequuntur qui, facere quisquam commodi, minima dolore? Repudiandae, totam quibusdam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur maiores quod quam quaerat laudantium quidem natus ad unde laborum, soluta, ut magni fuga ea excepturi mollitia commodi harum expedita. A.
-          </p>
-          <p>os meus hobbies preferidos são:
-          </p>
-          <p id="hobby">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolor neque minus distinctio nisi eligend.</p>
+          </p></li>
+            <li><p>os meus hobbies preferidos são:
+          </p></li>
+            <li><p id="hobby">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolor neque minus distinctio nisi eligend.</p></li>
+          </ul>
+          
+          
+          
+          
+          
           <diV class="btnEl">
             <button type="button" class="btn btn-outline-secondary">
             trocar imagem
@@ -93,7 +100,7 @@
     </diV> 
 
     <!-- GRID - 2 COL ? -->
-    <div class="container mb-3" >
+    <div class="container mb-3">
       <div class="row" >
         <div class="col">
           <!-- FORM -->
@@ -126,7 +133,12 @@
         <div class="col"> 
           <!-- FORM -->
           <label for="" class="form-label">frase de apresentação</label>
-          <input class="form-control" type="text" placeholder="" aria-label="default input example">
+
+          <form  id="fraseForm" action="/backend">
+
+          <input id="novaFrase" class="form-control" type="text" placeholder="" aria-label="default input example">
+
+          </form>
           <!-- .FORM -->
         </div>
       </div>

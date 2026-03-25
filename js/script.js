@@ -1,5 +1,7 @@
 "use strict";
-
+//
+//
+// BOOTSTRAP DARK MODE / LIGHT MODE
 document.querySelectorAll(".btn").forEach((buttonElement) => {
   const button = bootstrap.Button.getOrCreateInstance(buttonElement);
   button.toggle();
@@ -39,3 +41,34 @@ document.querySelectorAll(".btn").forEach((buttonElement) => {
     }
   }
 })();
+// .BOOTSTRAP DARK MODE / LIGHT MODE
+//
+// ADD TO SHOPPING LIST - NÃO ESTÁ ASSOCIADO A CLICK BOTAO
+// ARRANJAR FORM + BOTAO
+//
+let novaFraseForm = document.getElementById("fraseForm");
+let novaFraseLi = document.getElementById("novaFrase");
+
+novaFraseForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  let fraseData = new FormData(this);
+  let frasePersonalizar = document.createElement("");
+  frasePersonalizar.innerText = fraseData.get("");
+
+  novaFraseLi.appendChild(frasePersonalizar);
+  this.reset();
+});
+// ADD TO SHOPPING LIST
+let groceryForm = document.getElementById("myShoppingList");
+let myUl = document.querySelector("ul");
+
+groceryForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  let groceryData = new FormData(this);
+  let newLi = document.createElement("li");
+  newLi.innerText = groceryData.get("qt") + ":" + groceryData.get("product");
+
+  myUl.appendChild(newLi);
+
+  this.reset();
+});

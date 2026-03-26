@@ -64,11 +64,25 @@ let myUl = document.querySelector("ul");
 
 groceryForm.addEventListener("submit", function (event) {
   event.preventDefault();
-  let groceryData = new FormData(this);
+  let groceryData = new FormData(this);~
+  // 
   let newLi = document.createElement("li");
+  // 
   newLi.innerText = groceryData.get("qt") + ":" + groceryData.get("product");
 
   myUl.appendChild(newLi);
 
   this.reset();
+});
+
+let changeForm = document.getElementById("editForm");
+let newInput = document.getElementById("form-control");
+
+changeForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  let newFrase = new FormData(this);
+  let newPlaceholder = document.newInput("")
+
+
 });

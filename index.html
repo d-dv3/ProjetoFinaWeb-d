@@ -27,10 +27,9 @@
     <!-- NAVBAR     -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary ">
       <div class="container-fluid navEl">
-        <a class="navbar-brand" href="#"
-          ><h1 class="text-secondary">about me</h1></a
-        >
-
+        <a class="navbar-brand" href="#">
+          <h1 class="text-secondary">about me</h1>
+        </a>
           <!-- TOOGLE BUTTON DARK MODE/ LIGHT MODE -->
         <button id="themeToggle" aria-label="Toggle dark / light mode" title="Toggle dark / light mode">
           <span class="knob">
@@ -52,113 +51,115 @@
     </nav>
     <!-- NAVBAR-secondary -->
     <!-- GRID 2COL -->
-    <div class="container  mt-5 mb-5" style="border: 1px solid red;">
-      <!-- guuter: g-5 -->
-      <!-- img 3col: 286/ 150 -->
-      <div class="row">
-        <div class="col-8">
-          <ul>
-            <li><p>
-            Sou a <span class="nome">diana</span> - estou a estudar low code na cesae
-          </p></li>
-            <li  class="novaFrase"><p>
-            frase de apresentação</p></li>
-            <li><p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae corrupti dignissimos tenetur sit debitis sed, vitae accusamus dolorem quibusdam consequuntur qui, facere quisquam commodi, minima dolore? Repudiandae, totam quibusdam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur maiores quod quam quaerat laudantium quidem natus ad unde laborum, soluta, ut magni fuga ea excepturi mollitia commodi harum expedita. A.
-          </p></li>
-            <li><p>os meus hobbies preferidos são:
-          </p></li>
-            <li><p id="hobby">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolor neque minus distinctio nisi eligend.</p></li>
-          </ul>
-          
-          
-          
-          
-          <diV class="btnEl">
-            <button type="button" class="btn btn-outline-secondary">
-            trocar imagem
-            </button>
-            <button type="button" class="btn btn-outline-secondary ms-3">
-            adicionar hobby
-            </button>
-          </diV>
-        </div>
-        <div class="col-4 imgEl" style="border: 1px solid white">
-          <img id="trocarImg"
+    <div class="container mt-5 mb-5" style="border: 1px solid red;">
+      <!-- FORM -->
+      <!-- FORM -->
+      <!-- FORM -->
+      <!-- FORM -->
+      <!-- FORM -->
+      <!-- FORM -->
+      <form id="portflForm" action="/backend">
+        <div class="row">
+          <div class="col-8" style="border: 1px solid red;">
+            <ul>
+              <li><p>Sou a <span class="newNamePlaceholder">diana</span> - estou a estudar low code na cesae</p>
+              </li>
+              <li  class="novaFrasePlaceholder">
+              frase de apresentação</li>
+              <li><p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae corrupti dignissimos tenetur sit debitis sed, vitae accusamus dolorem quibusdam consequuntur qui, facere quisquam commodi, minima dolore? Repudiandae, totam quibusdam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur maiores quod quam quaerat laudantium quidem natus ad unde laborum, soluta, ut magni fuga ea excepturi mollitia commodi harum expedita. A.
+              </p></li>
+              <li><p>os meus hobbies preferidos são:
+              </p></li>
+              <li><p id="hobby">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolor neque minus distinctio nisi eligend.</p></li>
+            </ul>
+            <!--  -->
+            <!-- <diV class="btnEl" style="border: 1px solid red;">
+              <button type="button" class="btn btn-outline-secondary">
+              trocar imagem
+              </button>
+              <button type="button" class="btn btn-outline-secondary ms-3">
+              adicionar hobby
+              </button>
+            </diV> -->
+          </div>
+          <!--  -->
+          <div class="col-4 imgEl" style="border: 1px solid white">
+            <a href="#" id="newImgUrlPlaceholder"></a>
+            <!-- <img id="trocarImg"
             src="img/databaseImg.png"
             alt=""
-          />
+            /> -->
+          </div>
         </div>
       </div>
-    </div>
-    <!-- .GRID 2COL -->
-    <diV class="container">
-      <p>personaliza o portfólio</p>
-      <hr>
-    </diV> 
+      <!-- .GRID 2COL -->
+      <diV class="container" style="border: 1px solid red;"">
+        <p>personaliza o portfólio</p>
+        <hr>
+      </diV> 
 
-    <!-- GRID - 2 COL ? -->
-    <div class="container mb-3">
-      <div class="row" >
-        <div class="col">
-        
-          <label for="" class="form-label">nome</label>
-          <input id="form-control" type="text" placeholder="" aria-label="default input example">
-          
+      <!-- GRID - 2 COL ? -->
+      <div class="container mb-3" style="border: 1px solid red;">
+        <div class="row" >
+          <div class="col">
+            <label for="nome" class="form-label">nome</label>
+            <!--  -->
+            <!-- INPUT_ 1 -->
+            <!-- INPUT_ 1 -->
+            <!-- INPUT_ 1 -->
+            <input id="name" type="text" placeholder="introduz novo nome" value="" name="name">
+          </div>
           <!--  -->
-        </div>
-        <div class="col">
-          <!-- FORM --> 
-          <label for="" class="form-label">foto(url)</label>
-          <input class="form-control" type="text" placeholder="" aria-label="default input example">
-          <!--  -->
-        </div>
-        <div class="col">
-            <!-- FORM -->
-          <form id="editForm">
+          <div class="col"> 
+            <label for="foto" class="form-label">foto(url)</label>
+            <!--  -->
+            <!-- INPUT_ 2 -->
+            <!-- INPUT_ 2 -->
+            <!-- INPUT_ 2 -->
+            <input id="foto" type="#" placeholder="introduz url de foto" value="" name="foto">
+          </div>
+          <div class="col">
             <label for="exampleColorInput" class="form-label">cor favorita</label>
             <div class="formEl">
-          <!-- COLOR PICKER -> hright 24px -->
-            <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
-            <!-- .COLOR PICKER -->
-            <button type="submit" class="btn btn-outline-primary">personalizar</button>
-            </button>
+              <!-- COLOR PICKER -->
+              <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+              <!-- .COLOR PICKER -->
+              <!--  -->
+              <!--  -->
+              <!-- BUTTON SUBMIT -->
+              <!-- BUTTON SUBMIT -->
+              <!-- BUTTON SUBMIT -->
+              <button type="submit" class="btn btn-outline-primary">personalizar</button>
+              </button>
             </div>
-          </form>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="container mb-5">
-      <div class="row" >
-        <div class="col"> 
-          <!-- FORM -->
-          <label for="" class="form-label">frase de apresentação</label>
-
-          <form  id="fraseForm" action="/backend">
-
-          <input id="novaFrase" class="form-control" type="text" placeholder="" aria-label="default input example">
-
-          </form>
-          <!-- .FORM -->
+      <!--  -->
+      <div class="container mb-5" style="border: 1px solid red;">
+        <div class="row" >
+          <div class="col" style="border: 1px solid red;"  > 
+            <label for="" class="form-label">frase de apresentação</label>
+            <!--  -->
+            <!-- INPUT_ 3 -->
+            <!-- INPUT_ 3 -->
+            <!-- INPUT_ 3 -->
+            <input id="novaFrase" type="text" placeholder="introduz frase" value="" name="frase">
+          </div>
         </div>
       </div>
-    </div>
+    </form>
+    <!-- .FORM -->
+    <!-- .FORM -->
+    <!-- .FORM -->
+    <!-- .FORM -->
+    <!-- .FORM -->
+    <!-- .FORM -->
+    <!-- .FORM -->
     <!-- .GRID - 1 COL -->
-<form id="editForm" action="" method="get" class="form-example">
-  <div class="form-example">
-    <label for="name">name: </label>
-    <input type="text" name="name" id="name" required />
-  </div>
-  <div class="form-example">
-    <label for="email">frase </label>
-    <input type="email" name="email" id="frase" required />
-  </div>
-  <div class="form-example">
-    <input type="submit" value="Subscribe!" />
-  </div>
-</form>
+
 
 
 
@@ -223,13 +224,16 @@
     </div>
     <!-- .GRID - 3 COL -->
     <!-- SCRIPT IONICONS -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+<div class="container text-center">
+  <ul id="hobList">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <button id="addHobby" class="btn btn-outline-primary" >adiciona hobby</button>
+</div>
+
+
   </body>
 </html>

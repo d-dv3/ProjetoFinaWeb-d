@@ -58,32 +58,73 @@ document.querySelectorAll(".btn").forEach((buttonElement) => {
 //   novaFraseLi.appendChild(frasePersonalizar);
 //   this.reset();
 // });
-// ADD TO SHOPPING LIST
-let groceryForm = document.getElementById("myShoppingList");
+// EVENT
+// MY SHOPPING LIST
+// let groceryForm = document.getElementById("myShoppingList");
+// let myUl = document.querySelector("ul");
+//
+// groceryForm.addEventListener("submit", function (event) {
+//   event.preventDefault();
+
+//   let groceryData = new FormData(this);
+//   let newLi = document.createElement("li");
+//   //
+//   newLi.innerText = groceryData.get("qt") + ":" + groceryData.get("product");
+
+//   myUl.appendChild(newLi);
+
+//   this.reset();
+// });
+//
+//
+// let myPortflForm = document.getElementById("portflForm");
+// let newName = document.querySelector(".newNamePlaceholder");
+// let newImg = document.getElementById("newImgUrlPlaceholder");
+// let newFrase = document.querySelector(".novaFrasePlaceholder");
+
+// myPortflForm.addEventListener("submit", function (event) {
+//   event.preventDefault();
+//   //
+//   let newNameData = new FormData(this);
+//   let newNameImg = new FormData(this);
+//   let newNameFrase = new FormData(this);
+//   //
+
+//   // INNER TEXT ???
+//   newNamePlace.textContent = newNameData.get("newNamePlaceholder");
+//   //
+//   newNameData.get("");
+//   newName.textContent(newName);
+//   //
+//   this.reset();
+// });
+//
+// ANIMAIS DO ZOO
+// myForm.addEventListener("submit", function (event) {
+//   event.preventDefault();
+//   //traz um objecto com TODOS os inputs do formulário
+//   let data = new FormData(this);
+
+//   //acede ao input do formulário que tem no name newAnimal
+//   let animal = data.get("newAnimal");
+
+//   let newLi = document.createElement("li");
+//   newLi.innerText = animal;
+
+//   myList.appendChild(newLi);
+
+//   this.reset();
+// });
+
+let addHobby = document.getElementById("addHobby");
+let newLi = document.getElementById("hobList");
+
+addHobby.addEventListener("click") {
+    prompt=("adiciona um hobby");
+
+    document.getElementById("hobList").textContent = userHobby; 
+    console.log(userHobby); 
 
 
-groceryForm.addEventListener("submit", function (event) {
-  event.preventDefault();
-  let groceryData = new FormData(this);~
-  // 
-  let newLi = document.createElement("li");
-  // 
-  newLi.innerText = groceryData.get("qt") + ":" + groceryData.get("product");
-
-  myUl.appendChild(newLi);
-
-  this.reset();
-});
-
-let editFormUser = document.getElementById("editForm");
-let newInputName= document.getElementById("name");
-let newInputFrase = document.getElementById("frase");
-
-changeForm.addEventListener("submit", function (event) {
-  event.preventDefault();
-
-  let newFrase = new FormData(this);
-  let newPlaceholder = document.newInput("")
-
-
-});
+   
+}

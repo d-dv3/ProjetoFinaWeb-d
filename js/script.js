@@ -60,7 +60,7 @@ document.querySelectorAll(".btn").forEach((buttonElement) => {
 // });
 // ADD TO SHOPPING LIST
 let groceryForm = document.getElementById("myShoppingList");
-let myUl = document.querySelector("ul");
+
 
 groceryForm.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -75,8 +75,9 @@ groceryForm.addEventListener("submit", function (event) {
   this.reset();
 });
 
-let changeForm = document.getElementById("editForm");
-let newInput = document.getElementById("form-control");
+let editFormUser = document.getElementById("editForm");
+let newInputName= document.getElementById("name");
+let newInputFrase = document.getElementById("frase");
 
 changeForm.addEventListener("submit", function (event) {
   event.preventDefault();

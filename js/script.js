@@ -46,18 +46,18 @@ document.querySelectorAll(".btn").forEach((buttonElement) => {
 // ADD TO SHOPPING LIST - NÃO ESTÁ ASSOCIADO A CLICK BOTAO
 // ARRANJAR FORM + BOTAO
 //
-let novaFraseForm = document.getElementById("fraseForm");
-let novaFraseLi = document.getElementById("novaFrase");
+// let novaFraseForm = document.getElementById("fraseForm");
+// let novaFraseLi = document.getElementById("novaFrase");
 
-novaFraseForm.addEventListener("submit", function (event) {
-  event.preventDefault();
-  let fraseData = new FormData(this);
-  let frasePersonalizar = document.createElement("");
-  frasePersonalizar.innerText = fraseData.get("");
+// novaFraseForm.addEventListener("submit", function (event) {
+//   event.preventDefault();
+//   let fraseData = new FormData(this);
+//   let frasePersonalizar = document.createElement("");
+//   frasePersonalizar.innerText = fraseData.get("");
 
-  novaFraseLi.appendChild(frasePersonalizar);
-  this.reset();
-});
+//   novaFraseLi.appendChild(frasePersonalizar);
+//   this.reset();
+// });
 // ADD TO SHOPPING LIST
 let groceryForm = document.getElementById("myShoppingList");
 let myUl = document.querySelector("ul");

@@ -16,6 +16,7 @@
     />
     <!-- SCRIPT JS -->
     <script src="js/script.js" defer></script>
+    <script src="js/darkMode.js" defer></script>
   </head>
   <body>
     <!-- SCRIPT JS BOOTSTRAP -->
@@ -37,88 +38,91 @@
           </span>
         </button>
         <!-- .TOOGLE BUTTON DARK MODE/ LIGHT MODE -->
-        <!-- <span class="navbar-text"> Navbar text with an inline element </span> -->
         </div>
       </div>
     </nav>
     <!-- .NAVBAR -->
     <!-- NAVBAR-secondary -->
     <nav class="nav">
-      <a class="nav-link active" aria-current="page" href="#">CV</a>
-      <a class="nav-link" href="#">Portfolio</a>
-      <a class="nav-link" href="#">Contact</a>
-      <!-- <a class="nav-link disabled" aria-disabled="true">Disabled</a> -->
+      <a class="nav-link active" aria-current="page" href="#"><h4>CV</h4></a>
+      <a class="nav-link" href="#"><h4>Portfolio</h4></a>
+      <a class="nav-link" href="#"><h4>Contact</h4></a>
     </nav>
-    <!-- NAVBAR-secondary -->
+    <!-- .NAVBAR-secondary -->
     <!-- GRID 2COL -->
-    <div class="container mt-5 mb-5" style="border: 1px solid red;">
+    <div class="container mt-5 mb-5">
       <!-- FORM -->
-      <form id="portflForm" action="/backend">
+      <form id="portflForm" action="/backend" style="margin-bottom: 2rem;">
         <div class="row">
-          <form>
-          <div class="col-8" style="border: 1px solid red;">
+          <div class="col-8"  style="border:2px solid blue;">
             <ul>
-              <li><p>Sou a <span id="newNamePlaceholder">diana</span> - estou a estudar low code na cesae</p>
+              <li><p class="fs-5">Olá, o meu nome é <span id="newNamePlaceholder">diana</span>.</p>
               </li>
-              <li  id="novaFrasePlaceholder">
-              frase de apresentação</li>
-              <li><p>
-              Lorem ipsum dolor sit amet 
-              </p></li>
+              <li><p class="fs-5">Estou á procura de uma oportunidade como <span id="novaFrasePlaceholder"> programadora de low-code</span>.</p></li>
             </ul>
           </div>
           <!--  -->
-          <div class="col-4 imgEl" style="border: 1px solid white">
-
-            <!-- <img id="trocarImg"
-            src="https://unsplash.com/photos/a-woman-sitting-at-a-table-with-her-hand-on-her-chin-Wk5qXSi3hRc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText.jpg"
-            alt=""/> -->
+          <div class="col-4 imgEl"  style="border:2px solid blue;">
+            <img id="trocarImg"
+            src="img/vitaliy-shevchenko-djoZc69XK6k-unsplash.jpg"
+            alt=""/>
           </div>
         </div>
       </div>
       <!-- .GRID 2COL -->
-      <diV class="container" style="border: 1px solid red;"">
-        <p>personaliza o portfólio</p>
+      <diV class="container"
+        <p class="fs-5">personaliza o portfólio:</p>
         <hr>
       </diV> 
       <!-- GRID - 2 COL ? -->
-      <div class="container mb-3" style="border: 1px solid red;">
+      <div class="container mb-3">
         <div class="row" >
-          <div class="col">
-            <label for="nome" class="form-label">nome</label>
+          <div class="col"  style="border:2px solid blue;">
+            <label for="nome" class="form-label">escreve o teu nome</label><br>
             <!-- INPUT_ 1 -->
-            <input id="name" type="text" placeholder="introduz novo nome" value="" name="name">
+            <input id="name" type="text" placeholder="" value="" name="name">
           </div>
           <!--  -->
-          <div class="col"> 
-            <label for="foto" class="form-label">foto(url)</label> 
+          <div class="col"  style="border:2px solid blue;"> 
+            <label for="foto" class="form-label">adiciona a tua foto (jpg)</label><br> 
             <!-- INPUT_ 2 -->
-            <input id="foto" type="#" placeholder="introduz url de foto" value="" name="foto">
+            <input id="foto" type="#" placeholder="" value="" name="foto">
           </div>
-          <div class="col">
-            <label for="exampleColorInput" class="form-label">cor favorita</label>
-            <div class="formEl">
-              <!-- COLOR PICKER -->
-              <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
-              <!-- .COLOR PICKER -->
-              <!-- BUTTON SUBMIT -->
-              <button type="submit" class="btn btn-outline-primary">personalizar</button>
-              </button>
-            </div>
+          <div class="col" style="border:2px solid blue;display: flex;justify-content: center;align-items: center;"> 
+            <!-- BUTTON SUBMIT -->
+            <button type="submit" class="btn btn-outline-primary">personalizar</button>
           </div>
         </div>
       </div>
       <!--  -->
-      <div class="container mb-5" style="border: 1px solid red;">
+      <div class="container mb-5">
         <div class="row" >
-          <div class="col" style="border: 1px solid red;"  > 
-            <label for="" class="form-label">frase de apresentação</label>
+
+          <div class="col"  style="border:2px solid blue;"> 
+            <label for="" class="form-label">o que procuras:</label><br>
             <!-- INPUT_ 3 -->
-            <input id="novaFrase" type="text" placeholder="introduz frase" value="" name="frase">
+            <input id="novaFrase" type="text" placeholder="" value="" name="frase">
           </div>
+
+          <div class="col"  style="border: 2px solid blue;"></div>
+
+          <div class="col" style="border:2px solid blue;display: flex;justify-content: center;align-items: center;">
+        
+             <div style="border:2px solid blue;display: flex;justify-content: center;align-items: center;">
+              <!-- COLOR PICKER -->
+              <label for="exampleColorInput" class="form-label">cor favorita</label>
+
+             </div>
+             <div style="border:2px solid blue;display: flex;justify-content: center;align-items: center;">
+                            <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+              <!-- .COLOR PICKER -->
+             </div>
+          
+          
         </div>
       </div>
     </form>
+  </div>
     <!-- .FORM -->
     <!-- .FORM -->
     <!-- .FORM -->
@@ -132,22 +136,20 @@
 
 
 
-
-<div class="container">
-  <p>estes são os módulos que estou a fazer:</p>
-</div>
+  <div class="container">
+    <p>estes são os módulos que estou a fazer:</p>
+  </div>
 
     <!-- GRID - 3 COL -->
-    <div class="container text-center">
-      <div class="row">
-        <div class="col cardEl">
-          <!-- card-01 -->
-          <div class="card" style="width: 18rem">
-            <img
-              src="img/databaseImg.png"
-              class="card-img-top cardImg"
-              alt="..."
-            />
+  <div class="container text-center">
+    <div class="row">
+      <div class="col cardEl">
+        <!-- card-01 -->
+        <div class="card" style="width: 18rem; margin-bottom: 2rem;">
+          <img
+            src="img/databaseImg.png"
+            class="card-img-top cardImg"
+            alt="..."/>
             <div class="card-body cardTextBox">
               <p class="card-text fs-5">Gestão de Base de Dados:</p>
               <p class="card-text">mds | bd</p>
@@ -160,7 +162,7 @@
         </div>
         <div class="col cardEl">
           <!-- card-02 -->
-          <div class="card" style="width: 18rem">
+          <div class="card" style="width: 18rem; margin-bottom: 2rem;">
             <img src="img/webImg.png" class="card-img-top cardImg" alt="..." />
             <div class="card-body cardTextBox">
               <p class="card-text fs-5">Web Development:</p>
@@ -173,7 +175,7 @@
         </div>
         <div class="col cardEl">
           <!-- card-03 -->
-          <div class="card" style="width: 18rem">
+          <div class="card" style="width: 18rem;margin-bottom: 2rem;">
             <img
               src="img/outsystemsImg.png"
               class="card-img-top cardImg"
@@ -186,13 +188,66 @@
               <p class="card-text">outsystems mobile developer</p>
             </div>
           </div>
-          <!-- card-03 -->
+          
         </div>
+        <!-- card-03 -->
       </div>
     </div>
     <!-- .GRID - 3 COL -->
     <!-- SCRIPT IONICONS -->
-<div class="container text-center">
+
+    <div class="container mt-5">
+      <div class="row" style="min-height:300px;">
+        <!-- COL 1 -->
+        <div class="col" style="border: 2px solid orange;">
+          <p>os meus hobbies favoritos:</p>
+          <ul>
+            <li>desenhar ✏️</li>
+            <li>ouvir música 🎧</li>
+            <li>fazer colagens ✂️</li>
+            <li>ir ao cinema 🎬</li>
+            <li>tratar de plantas 🪴</li>
+          </ul>
+        </div>
+        <!-- COL 2 -->
+        <div class="col text-center" style="border: 2px solid orange;">
+          <img src="img/markus-spiske-4PG6wLlVag4-unsplash.png">
+        </div>
+        <!-- col3 -->
+        <div class="col text-center" style="border: 2px solid orange;">
+          <div class="text-center">
+            <ul id="jokeList">
+            </ul>
+          </div>
+        <div>
+            
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <!-- col 1 -->
+        <div class="col text-center">
+          <button class="btn btn-outline-primary">muda a imagem</button>
+        </div>
+        <!-- col 2 -->
+        <div class="col text-center">
+          <button class="btn btn-outline-primary">muda a imagem</button>
+        </div>
+        <!-- col3 -->
+        <div class="col text-center">
+          <button id="getJoke" class="btn btn-outline-primary">how is that sense of humor?</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+<!-- <div class="container text-center">
   <ul id="hobList">
     <li></li>
     <li></li>
@@ -200,7 +255,7 @@
     <li></li>
   </ul>
   <button id="addHobby" class="btn btn-outline-primary" >adiciona hobby</button>
-</div>
+</div> -->
 
 
   </body>

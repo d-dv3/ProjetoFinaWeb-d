@@ -1,6 +1,15 @@
 /*  */
 /*  */
 /*  */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#foto {
+  max-width: 300px;
+  max-height: 150px;
+}
 .btnEl {
   display: flex;
   justify-content: right;

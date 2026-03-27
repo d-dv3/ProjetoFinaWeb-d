@@ -44,17 +44,16 @@
     <!-- .NAVBAR -->
     <!-- NAVBAR-secondary -->
     <nav class="nav">
-      <a class="nav-link active" aria-current="page" href="#"><h4>CV</h4></a>
-      <a class="nav-link" href="#"><h4>Portfolio</h4></a>
-      <a class="nav-link" href="#"><h4>Contact</h4></a>
+      <a class="nav-link active" aria-current="page" href="#"><h4>formação</h4></a>
+      <a class="nav-link" href="#tempLivres""><h4>tempos livres</h4></a>
     </nav>
     <!-- .NAVBAR-secondary -->
     <!-- GRID 2COL -->
     <div class="container mt-5 mb-5">
       <!-- FORM -->
-      <form id="portflForm" action="/backend" style="margin-bottom: 2rem;">
+      <form id="portflForm" style="margin-bottom: 2rem;">
         <div class="row">
-          <div class="col-8"  style="border:2px solid blue;">
+          <div class="col-8">
             <ul>
               <li><p class="fs-5">Olá, o meu nome é <span id="newNamePlaceholder">diana</span>.</p>
               </li>
@@ -62,7 +61,7 @@
             </ul>
           </div>
           <!--  -->
-          <div class="col-4 imgEl"  style="border:2px solid blue;">
+          <div class="col-4 imgEl">
             <img id="trocarImg"
             src="img/vitaliy-shevchenko-djoZc69XK6k-unsplash.jpg"
             alt=""/>
@@ -70,72 +69,82 @@
         </div>
       </div>
       <!-- .GRID 2COL -->
-      <diV class="container"
+      <diV class="container">
         <p class="fs-5">personaliza o portfólio:</p>
         <hr>
       </diV> 
       <!-- GRID - 2 COL ? -->
       <div class="container mb-3">
         <div class="row" >
-          <div class="col"  style="border:2px solid blue;">
-            <label for="nome" class="form-label">escreve o teu nome</label><br>
+          <div class="col text-center" >
             <!-- INPUT_ 1 -->
-            <input id="name" type="text" placeholder="" value="" name="name">
+
+            <div>
+              <label for="nome" class="form-label">escreve o teu nome</label><br>
+              <input id="name" type="text" value="" name="name">
+            </div>
+
+            
           </div>
           <!--  -->
-          <div class="col"  style="border:2px solid blue;"> 
-            <label for="foto" class="form-label">adiciona a tua foto (jpg)</label><br> 
+          <div class="col text-center" >
             <!-- INPUT_ 2 -->
-            <input id="foto" type="#" placeholder="" value="" name="foto">
+            <div>
+              <label for="foto" class="form-label">adiciona a tua foto (jpg)</label><br> 
+              <input id="foto" type="#" placeholder="" value="" name="foto">
+            </div>
+            
           </div>
-          <div class="col" style="border:2px solid blue;display: flex;justify-content: center;align-items: center;"> 
-            <!-- BUTTON SUBMIT -->
-            <button type="submit" class="btn btn-outline-primary">personalizar</button>
+          <!-- col 3 -->
+          <div class="col"> 
+
+            <div style="display: flex; justify-self: center;" >
+              <!-- COLOR PICKER -->
+              <label style="margin-right: 2rem;" for="exampleColorInput" class="form-label">cor favorita   </label>
+              <p>cor aleatória</p>
+            </div>
+
+            <div  style=" display: flex;justify-self: center;" >
+
+              <input style="margin-right: 4rem;" type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+
+              <div style="width: 46px;height:36px;border: 1px solid grey; display: flex; align-items: center;justify-content: center;" >
+                <div id="allColors" style="width: 34px ;height: 24px;padding: 6px;border:1px solid grey " >
+                </div>
+              </div>
+            </div>
+
+            
           </div>
         </div>
       </div>
       <!--  -->
       <div class="container mb-5">
         <div class="row" >
-
-          <div class="col"  style="border:2px solid blue;"> 
-            <label for="" class="form-label">o que procuras:</label><br>
+          <div class="col-4 text-center">      
             <!-- INPUT_ 3 -->
-            <input id="novaFrase" type="text" placeholder="" value="" name="frase">
+          <div>
+            <label for="" class="form-label">o que procuras:</label><br>
+            <input id="novaFrase" type="text" value="" name="frase">
+          </div>
+            
+          </div>
+          <div class="col-4" style="display: flex;justify-content: center;align-items: center;">
+<!-- BUTTON SUBMIT -->
+            <button type="submit" class="btn btn-outline-primary">personalizar</button>
           </div>
 
-          <div class="col"  style="border: 2px solid blue;"></div>
-
-          <div class="col" style="border:2px solid blue;display: flex;justify-content: center;align-items: center;">
+          <div class="col-4" style="display: flex;align-items: center;justify-content: center; " >
+            <!-- BUTTON ALEATORIO -->
+            <button id="corAbtn"  class="btn btn-outline-primary">escolhe cor aleatória</button>
+          </div>
         
-             <div style="border:2px solid blue;display: flex;justify-content: center;align-items: center;">
-              <!-- COLOR PICKER -->
-              <label for="exampleColorInput" class="form-label">cor favorita</label>
-
-             </div>
-             <div style="border:2px solid blue;display: flex;justify-content: center;align-items: center;">
-                            <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
-              <!-- .COLOR PICKER -->
-             </div>
-          
-          
         </div>
       </div>
     </form>
   </div>
     <!-- .FORM -->
     <!-- .FORM -->
-    <!-- .FORM -->
-    <!-- .FORM -->
-    <!-- .FORM -->
-    <!-- .FORM -->
-    <!-- .FORM -->
-    <!-- .GRID - 1 COL -->
-
-
-
-
-
   <div class="container">
     <p>estes são os módulos que estou a fazer:</p>
   </div>
@@ -194,12 +203,17 @@
       </div>
     </div>
     <!-- .GRID - 3 COL -->
-    <!-- SCRIPT IONICONS -->
+
+      <diV class="container" id="tempLivres"
+        <p class="fs-5">o que gosto de fazer no tempos livres:</p>
+        <hr>
+      </diV> 
+
 
     <div class="container mt-5">
       <div class="row" style="min-height:300px;">
         <!-- COL 1 -->
-        <div class="col" style="border: 2px solid orange;">
+        <div class="col">
           <p>os meus hobbies favoritos:</p>
           <ul>
             <li>desenhar ✏️</li>
@@ -210,11 +224,11 @@
           </ul>
         </div>
         <!-- COL 2 -->
-        <div class="col text-center" style="border: 2px solid orange;">
+        <div class="col text-center">
           <img src="img/markus-spiske-4PG6wLlVag4-unsplash.png">
         </div>
         <!-- col3 -->
-        <div class="col text-center" style="border: 2px solid orange;">
+        <div class="col text-center">
           <div class="text-center">
             <ul id="jokeList">
             </ul>
@@ -228,7 +242,7 @@
       <div class="row">
         <!-- col 1 -->
         <div class="col text-center">
-          <button class="btn btn-outline-primary">muda a imagem</button>
+          <button class="btn btn-outline-primary">adiciona hobby</button>
         </div>
         <!-- col 2 -->
         <div class="col text-center">
@@ -243,20 +257,8 @@
 
 
 
-    <!--  -->
-    <!--  -->
-    <!--  -->
-    <!--  -->
-<!-- <div class="container text-center">
-  <ul id="hobList">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
-  <button id="addHobby" class="btn btn-outline-primary" >adiciona hobby</button>
-</div> -->
 
+    <div></div>
 
   </body>
 </html>

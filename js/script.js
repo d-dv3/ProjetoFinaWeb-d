@@ -7,6 +7,11 @@ let myNome = document.getElementById("newNamePlaceholder");
 let myFrase = document.getElementById("novaFrasePlaceholder");
 let newImgUrl = document.getElementById("fotoUrl"); //input
 let userPhoto = document.getElementById("imgPrtf"); // img
+let colorPicker = document.getElementById("exampleColorInput");
+
+colorPicker.addEventListener("change", function () {
+  localStorage.setItem("savedColor", this.value);
+});
 
 prtForm.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -16,8 +21,25 @@ prtForm.addEventListener("submit", function (event) {
   myFrase.innerText = prfData.get("frase");
   userPhoto.setAttribute("src", prfData.get("addedUrlphoto"));
 
+  // local storage
+  localStorage.setItem("savedName", prfData.get("name"));
+  localStorage.setItem("savedFrase", prfData.get("frase"));
+  localStorage.setItem("savedPhoto", prfData.get("addedUrlphoto"));
+
   this.reset();
+
+  // reset color picker
+  let savedColor = localStorage.getItem("savedColor");
+  if (savedColor) {
+    colorPicker.value = savedColor;
+  }
+
+  let count = parseInt(localStorage.getItem("submitCount") || 0);
+  count++;
+  localStorage.setItem("submitCount", count);
+  document.getElementById("localstorageCount").innerText = count;
 });
+
 //
 // API
 let askJokeBtn = document.getElementById("getJoke");
@@ -94,52 +116,10 @@ addBtn.addEventListener("click", () => {
   hobList.appendChild(newLi);
 });
 //
-// SAVE LOCAL STORAGE
-// on page load - restore saved data
-// window.addEventListener("load", function () {
-//   let saved = JSON.parse(localStorage.getItem("portfolioData"));
-//   if (saved) {
-//     myNome.innerText = saved.name || "diana";
-//     myFrase.innerText = saved.frase || "programadora de low-code";
-//     if (saved.photo) userPhoto.setAttribute("src", saved.photo);
-//     // restore other fields...
-//   }
-// });
+// RESET BUTTON
+let resetBtn = document.getElementById("resetBtn");
 
-// on form submit - save to localStorage
-// prtForm.addEventListener("submit", function (event) {
-//   event.preventDefault();
-//   let prfData = new FormData(this);
-
-//   let nome = prfData.get("name");
-//   let frase = prfData.get("frase");
-//   let photo = prfData.get("addedUrlphoto");
-
-//   myNome.innerText = nome;
-//   myFrase.innerText = frase;
-//   userPhoto.setAttribute("src", photo);
-
-//   // save to localStorage
-//   localStorage.setItem(
-//     "portfolioData",
-//     JSON.stringify({
-//       name: nome,
-//       frase: frase,
-//       photo: photo,
-//     }),
-//   );
-
-//   this.reset();
-// });
-
-// reset button - clears everything
-// let resetBtn = document.getElementById("resetBtn");
-// resetBtn.addEventListener("click", function () {
-//   localStorage.removeItem("portfolioData");
-//   myNome.innerText = "diana";
-//   myFrase.innerText = "programadora de low-code";
-//   userPhoto.setAttribute(
-//     "src",
-//     "img/vitaliy-shevchenko-djoZc69XK6k-unsplash.jpg",
-//   );
-// });
+resetBtn.addEventListener("click", function () {
+  localStorage.clear();
+  location.reload();
+});

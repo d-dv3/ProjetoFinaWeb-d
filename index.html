@@ -17,6 +17,9 @@
     <!-- SCRIPT JS -->
     <script src="js/script.js" defer></script>
     <script src="js/darkMode.js" defer></script>
+    <!-- SCRIPT ION ICONS -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </head>
   <body>
     <!-- SCRIPT JS BOOTSTRAP -->
@@ -25,7 +28,7 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-    <!-- NAVBAR     -->
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary ">
       <div class="container-fluid navEl">
         <a class="navbar-brand" href="#">
@@ -37,7 +40,6 @@
             <i class="bi bi-sun-fill" id="knobIcon"></i>
           </span>
         </button>
-        </div>
       </div>
     </nav>
     <!-- NAVBAR-secondary -->
@@ -45,11 +47,10 @@
       <a class="nav-link active" aria-current="page" href="#"><h4>formação</h4></a>
       <a class="nav-link" href="#tempLivres""><h4>tempos livres</h4></a>
     </nav>
-    <!-- .NAVBAR-secondary -->
-    <!-- GRID  -->
+    <!-- GRID -->
     <div class="container mt-5 mb-5" >
       <!-- FORM -->
-      <form id="portflForm" style="margin-bottom: 2rem;">
+      <form id="portflForm">
         <div class="row">
           <div class="col-8">
             <ul>
@@ -60,108 +61,78 @@
           </div>
           <!--  -->
           <div class="col-4 imgEl">
-            <img id="trocarImg"
+            <img id="imgPrtf"
             src="img/vitaliy-shevchenko-djoZc69XK6k-unsplash.jpg"
             alt=""/>
           </div>
         </div>
-      </div>
-      <!-- HR -->
-      <diV class="container" >
-        <p class="fs-5">personaliza o portfólio:</p>
-        <hr>
-      </diV> 
-      <!-- GRID - 2 COL ? -->
-      <div class="container mb-3"  >
-        <div class="row" >
-          <div class="col text-center" > 
-            <!-- INPUT_ 1 -->
-
-            <div>
-              <label for="nome" class="form-label">escreve o teu nome</label><br>
-              <input id="name" type="text" value="" name="name">
-            </div>
-
-            
-          </div>
-          <!--  -->
-          <div class="col text-center" >
-            <!-- INPUT_ 2 -->
-            <div>
-              <label for="foto" class="form-label">adiciona a tua foto (jpg)</label><br> 
-              <input id="foto" type="#" placeholder="" value="" name="foto">
-            </div>
-            
-          </div>
-          <!-- col 3 -->
-          <div class="col"  > 
-
-            <div style="display: flex; justify-self: center;" >
-              <!-- COLOR PICKER -->
-              <label style="margin-right: 2rem;" for="exampleColorInput" class="form-label">cor favorita </label>
-  
-            </div>
-
-            <div  style=" display: flex;justify-self: center;" >
-
-              <input style="margin-right: 4rem;" type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
-
-
-            </div>
+    </div>
+    <!-- -->
+    <diV class="container" >
+      <p class="fs-5">personaliza o portfólio:</p>
+      <hr>
+    </diV> 
+    <!--  -->
+    <div class="container mb-3"  >
+      <div class="row" >
+        <div class="col text-center" > 
+          <!-- INPUT_ 1 -->
+          <div>
+            <label for="nome" class="form-label">escreve o teu nome</label><br>
+            <input id="name" type="text" name="name">
           </div>
         </div>
+        <!--  -->
+        <div class="col text-center" >
+          <!-- INPUT_ 2 -->
+          <div>
+            <label for="foto" class="form-label">adiciona a tua foto (url)</label><br> 
+            <input id="fotoUrl" type="url" name="addedUrlphoto">
+          </div>
+        </div>
+        <!-- col 3 -->
+        <div class="col" > 
+          <!-- COLOR PICKER -->
+          <div class="colorPicker" >
+            <label for="exampleColorInput" class="form-label">cor favorita </label>
+          </div>
+          <div class="colorPicker"  >
+            <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <div class="container mb-5">
+      <div class="row" >
+        <div class="col-4 text-center">      
+          <!-- INPUT_ 3 -->
+          <div>
+            <label class="form-label">o que procuras:</label><br>
+            <input id="novaFrase" type="text" name="frase">
+          </div>
+        </div>
+        <div class="col-4 imgEl">
+          <!-- BUTTON SUBMIT -->
+          <button type="submit" class="btn btn-outline-primary">personalizar</button>
+        </div>
+      </div>
+    </div>
+    </form>
+    <!-- .FORM -->
+    <div>
+    <!--  -->
+      <div class="container">
+        <p class="fs-5">formação:</p>
+        <hr>
       </div>
       <!--  -->
-      <div class="container mb-5">
-        <div class="row" >
-          <div class="col-4 text-center">      
-            <!-- INPUT_ 3 -->
-          <div>
-            <label for="" class="form-label">o que procuras:</label><br>
-            <input id="novaFrase" type="text" value="" name="frase">
-          </div>
-            
-          </div>
-          <div class="col-4" style="display: flex;justify-content: center;align-items: center;">
-          <!-- BUTTON SUBMIT -->
-            <button type="submit" class="btn btn-outline-primary">personalizar</button>
-          </div>
-
-          
-      
-        </div>
-      </div>
-    </form>
-    <!--  -->
-    <!-- OUSIDE FORM -->
-  <div>
-
-
-  <div class="container" >
-    <div class="row" >
-      <div class="col-4"></div>
-      <div class="col-4"></div>
-      <div class="col-4"  style="display: flex; justify-content: center;">
-
-        
-      </div>
-
-    </div>
-  </div>
-
-
-  <div class="container">
-    <p class="fs-5">formação:</p>
-    <hr>
-  </div>
-
-    <!-- GRID - 3 COL -->
-  <div class="container text-center">
-    <div class="row">
-      <div class="col cardEl">
-        <!-- card-01 -->
-        <div class="card" style="width: 18rem; margin-bottom: 2rem;">
-          <img
+      <div class="container text-center">
+        <div class="row">
+          <div class="col cardEl">
+          <!-- card-01 -->
+          <div class="card">
+            <img
             src="img/databaseImg.png"
             class="card-img-top cardImg"
             alt="..."/>
@@ -173,12 +144,11 @@
               </p>
             </div>
           </div>
-          <!-- .card-01 -->
         </div>
         <div class="col cardEl">
           <!-- card-02 -->
-          <div class="card" style="width: 18rem; margin-bottom: 2rem;">
-            <img src="img/webImg.png" class="card-img-top cardImg" alt="..." />
+          <div class="card">
+            <img src="img/webImg.png" class="card-img-top cardImg" />
             <div class="card-body cardTextBox">
               <p class="card-text fs-5">Web Development:</p>
               <p class="card-text">html</p>
@@ -186,16 +156,13 @@
               <p class="card-text">javascript</p>
             </div>
           </div>
-          <!-- .card-02 -->
         </div>
         <div class="col cardEl">
           <!-- card-03 -->
-          <div class="card" style="width: 18rem;margin-bottom: 2rem;">
+          <div class="card">
             <img
               src="img/outsystemsImg.png"
-              class="card-img-top cardImg"
-              alt="..."
-            />
+              class="card-img-top cardImg"/>
             <div class="card-body cardTextBox">
               <p class="card-text fs-5">Outsystems:</p>
               <p class="card-text">outsystems associate reactive developer</p>
@@ -203,21 +170,17 @@
               <p class="card-text">outsystems mobile developer</p>
             </div>
           </div>
-          
         </div>
-        <!-- card-03 -->
       </div>
     </div>
-    <!-- .GRID - 3 COL -->
-
-      <diV class="container" id="tempLivres">  
-        <p class="fs-5">nos tempos livres:</p>
-        <hr>
-      </diV> 
-
-
+    <!--  -->
+    <div class="container" id="tempLivres">  
+      <p class="fs-5">tempos livres:</p>
+      <hr>
+    </div> 
+    <!--  -->
     <div class="container mt-5">
-      <div class="row" style="min-height:300px;">
+      <div class="row tempLiv">
         <!-- COL 1 -->
         <div class="col text-center">
           <p>os meus hobbies favoritos:</p>
@@ -248,53 +211,43 @@
               </div>
             </div>
           </div>
-        
-
-
-
       </div>
     </div>
-
+    <!--  -->
     <div class="container mb-5">
       <div class="row">
-        <!-- col 1 -->
+        <!-- col 1btn -->
         <div class="col text-center">
-          <button id="changeImgBtn" class="btn btn-outline-secondary">adiciona hobby</button>
+          <button id="addHob" class="btn btn-outline-secondary">adiciona hobby</button>
         </div>
-        <!-- col 2 -->
+        <!-- col 2btn -->
         <div class="col text-center">
-          <button class="btn btn-outline-secondary">muda a imagem</button>
+          <button id="changeImgBtn" class="btn btn-outline-secondary">muda a imagem</button>
         </div>
-        <!-- col3 -->
+        <!-- col3btn -->
         <div class="col text-center">
-          <button id="getJoke" class="btn btn-outline-secondary">how is that sense of humor?</button>
+          <button id="getJoke" class="btn btn-outline-secondary">some humor!</button>
         </div>
-        <!-- col4 -->
-         <div class="col text-center">
+        <!-- col4btn -->
+        <div class="col text-center">
           <div>
-          <!-- BUTTON ALEATORIO -->
-          <button id="corAbtn"  class="btn btn-outline-secondary"> 🌈 escolhe cor aleatória</button>
+            <button id="corAbtn"  class="btn btn-outline-secondary"> 🌈 escolhe cor aleatória</button>
+          </div>
         </div>
-
       </div>
     </div>
-<hr>
-
-<div style="display: flex;border: 1px solid red;align-items: center;justify-content: space-between;">
-
-  <div style="display: flex;" >
-    <p style="margin-right: 2rem;" >nome@email.pt </p>
-    <p style="margin-right: 2rem;"  >site.com </p>
-    <p style="margin-right: 2rem;"  >github</p>
-  </div>
-  <div style="display: flex;"  >
-    <p  style="margin-right: 2rem;">[portfolios carregados com sucesso: <span>0</span>] </p>
-    <button class="btn btn-outline-warning" style="display: flex;align-items: center;" > ✨📍✔️🔄️🚩🚀 reset</button>
-  </div>
-
-</div>
-
-  
-
+    <hr>
+    <!--  -->
+    <footer class="mb-5">
+      <div>
+        <p class="me-5">nome@email.pt </p>
+        <p class="me-5">site.com </p>
+        <p class="me-5">github</p>
+      </div>
+      <div>
+      <p  class="me-5">[&nbsp portfolios carregados com sucesso:&nbsp  <span>0</span>📍 &nbsp] </p>
+      <button id="resetBtn" class="btn btn-outline-warning"><ion-icon name="refresh-outline"></ion-icon></button>
+    </div>
+   </footer>           
   </body>
 </html>

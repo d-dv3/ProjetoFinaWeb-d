@@ -1,0 +1,4 @@
+exemplo usado para testar adicionar foto-url no form:
+
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Chimamanda_Adichie_11.09.10_%285248097626%29.jpg/500px-Chimamanda_Adichie_11.09.10_%285248097626%29.jpg

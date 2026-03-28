@@ -5,7 +5,8 @@
 let prtForm = document.getElementById("portflForm");
 let myNome = document.getElementById("newNamePlaceholder");
 let myFrase = document.getElementById("novaFrasePlaceholder");
-let newImgUrl = document.getElementById("trocarImg");
+let newImgUrl = document.getElementById("fotoUrl"); //input
+let userPhoto = document.getElementById("imgPrtf"); // img
 
 prtForm.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -13,17 +14,10 @@ prtForm.addEventListener("submit", function (event) {
 
   myNome.innerText = prfData.get("name");
   myFrase.innerText = prfData.get("frase");
-  newImgUrl.setAttribute("src", prfData.get("foto"));
+  userPhoto.setAttribute("src", prfData.get("addedUrlphoto"));
 
   this.reset();
 });
-//
-// img to form:
-// find images https// ...  .jpg
-//
-//
-//
-
 //
 // API
 let askJokeBtn = document.getElementById("getJoke");
@@ -46,16 +40,15 @@ askJokeBtn.addEventListener("click", function () {
 document.addEventListener("keydown", function (event) {
   console.log(event.key);
   if (event.key == "Enter") {
-    alert("evento de teclado!" + event.key);
+    alert("tem a certeza que acabou o exercício?" + event.key);
   }
 });
-//
 //
 // RANDOM COLORS
 function getRandomBKGcolor() {
   return Math.floor(Math.random() * 255);
 }
-//
+
 let randomColorBtn = document.getElementById("corAbtn");
 let colorsSpot = document.getElementById("allColors");
 
@@ -74,36 +67,22 @@ randomColorBtn.addEventListener("click", () => {
   colorsSpot.style.backgroundColor = rColor;
 });
 //
-//
 // CHANGE IMG
+let imageBtn = document.getElementById("changeImgBtn");
+let imgHob = document.getElementById("changeImg");
 
-// image.style.width = '150px';
-// image.style.borderRadius = '50%';
-
-// imageBtn.addEventListener("click", () => {
-
-// let imageBtn = document.getElementById("changeImgBtn");
-// let imgHob = document.getElementById("changeImg");
-
-//     if(imgHob.getAttribute("src") ==
-//         "img/markus-spiske-4PG6wLlVag4-unsplash.png") {
-
-//             imgHob.getAttribute("src") == "imag/austin-neill-hgO1wFPXl31-unsplash.jpg";
-
-//     }
-//         else if {
-//             imgHob.getAttribute("src") == "imag/
-//         }
-//         else {
-//           imgHob.getAttribute("src") == "imag/
-//         }
-// });
-//
-//
-
+imageBtn.addEventListener("click", () => {
+  if (
+    imgHob.getAttribute("src") == "img/markus-spiske-4PG6wLlVag4-unsplash.png"
+  ) {
+    imgHob.setAttribute("src", "img/austin-neill-hgO1wFPXl3I-unsplash.png");
+  } else {
+    imgHob.setAttribute("src", "img/markus-spiske-4PG6wLlVag4-unsplash.png");
+  }
+});
 //
 // ADD HOBBY
-let addBtn = document.getElementById("changeImgBtn");
+let addBtn = document.getElementById("addHob");
 let hobList = document.getElementById("hobUl");
 
 addBtn.addEventListener("click", () => {
@@ -114,3 +93,53 @@ addBtn.addEventListener("click", () => {
   newLi.innerText = outroHB;
   hobList.appendChild(newLi);
 });
+//
+// SAVE LOCAL STORAGE
+// on page load - restore saved data
+// window.addEventListener("load", function () {
+//   let saved = JSON.parse(localStorage.getItem("portfolioData"));
+//   if (saved) {
+//     myNome.innerText = saved.name || "diana";
+//     myFrase.innerText = saved.frase || "programadora de low-code";
+//     if (saved.photo) userPhoto.setAttribute("src", saved.photo);
+//     // restore other fields...
+//   }
+// });
+
+// on form submit - save to localStorage
+// prtForm.addEventListener("submit", function (event) {
+//   event.preventDefault();
+//   let prfData = new FormData(this);
+
+//   let nome = prfData.get("name");
+//   let frase = prfData.get("frase");
+//   let photo = prfData.get("addedUrlphoto");
+
+//   myNome.innerText = nome;
+//   myFrase.innerText = frase;
+//   userPhoto.setAttribute("src", photo);
+
+//   // save to localStorage
+//   localStorage.setItem(
+//     "portfolioData",
+//     JSON.stringify({
+//       name: nome,
+//       frase: frase,
+//       photo: photo,
+//     }),
+//   );
+
+//   this.reset();
+// });
+
+// reset button - clears everything
+// let resetBtn = document.getElementById("resetBtn");
+// resetBtn.addEventListener("click", function () {
+//   localStorage.removeItem("portfolioData");
+//   myNome.innerText = "diana";
+//   myFrase.innerText = "programadora de low-code";
+//   userPhoto.setAttribute(
+//     "src",
+//     "img/vitaliy-shevchenko-djoZc69XK6k-unsplash.jpg",
+//   );
+// });

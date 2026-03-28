@@ -37,19 +37,17 @@
             <i class="bi bi-sun-fill" id="knobIcon"></i>
           </span>
         </button>
-        <!-- .TOOGLE BUTTON DARK MODE/ LIGHT MODE -->
         </div>
       </div>
     </nav>
-    <!-- .NAVBAR -->
     <!-- NAVBAR-secondary -->
     <nav class="nav">
       <a class="nav-link active" aria-current="page" href="#"><h4>formação</h4></a>
       <a class="nav-link" href="#tempLivres""><h4>tempos livres</h4></a>
     </nav>
     <!-- .NAVBAR-secondary -->
-    <!-- GRID 2COL -->
-    <div class="container mt-5 mb-5">
+    <!-- GRID  -->
+    <div class="container mt-5 mb-5" >
       <!-- FORM -->
       <form id="portflForm" style="margin-bottom: 2rem;">
         <div class="row">
@@ -68,15 +66,15 @@
           </div>
         </div>
       </div>
-      <!-- .GRID 2COL -->
-      <diV class="container">
+      <!-- HR -->
+      <diV class="container" >
         <p class="fs-5">personaliza o portfólio:</p>
         <hr>
       </diV> 
       <!-- GRID - 2 COL ? -->
-      <div class="container mb-3">
+      <div class="container mb-3"  >
         <div class="row" >
-          <div class="col text-center" >
+          <div class="col text-center" > 
             <!-- INPUT_ 1 -->
 
             <div>
@@ -96,25 +94,20 @@
             
           </div>
           <!-- col 3 -->
-          <div class="col"> 
+          <div class="col"  > 
 
             <div style="display: flex; justify-self: center;" >
               <!-- COLOR PICKER -->
-              <label style="margin-right: 2rem;" for="exampleColorInput" class="form-label">cor favorita   </label>
-              <p>cor aleatória</p>
+              <label style="margin-right: 2rem;" for="exampleColorInput" class="form-label">cor favorita </label>
+  
             </div>
 
             <div  style=" display: flex;justify-self: center;" >
 
               <input style="margin-right: 4rem;" type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
 
-              <div style="width: 46px;height:36px;border: 1px solid grey; display: flex; align-items: center;justify-content: center;" >
-                <div id="allColors" style="width: 34px ;height: 24px;padding: 6px;border:1px solid grey " >
-                </div>
-              </div>
-            </div>
 
-            
+            </div>
           </div>
         </div>
       </div>
@@ -130,23 +123,36 @@
             
           </div>
           <div class="col-4" style="display: flex;justify-content: center;align-items: center;">
-<!-- BUTTON SUBMIT -->
+          <!-- BUTTON SUBMIT -->
             <button type="submit" class="btn btn-outline-primary">personalizar</button>
           </div>
 
-          <div class="col-4" style="display: flex;align-items: center;justify-content: center; " >
-            <!-- BUTTON ALEATORIO -->
-            <button id="corAbtn"  class="btn btn-outline-primary">escolhe cor aleatória</button>
-          </div>
-        
+          
+      
         </div>
       </div>
     </form>
+    <!--  -->
+    <!-- OUSIDE FORM -->
+  <div>
+
+
+  <div class="container" >
+    <div class="row" >
+      <div class="col-4"></div>
+      <div class="col-4"></div>
+      <div class="col-4"  style="display: flex; justify-content: center;">
+
+        
+      </div>
+
+    </div>
   </div>
-    <!-- .FORM -->
-    <!-- .FORM -->
+
+
   <div class="container">
-    <p>estes são os módulos que estou a fazer:</p>
+    <p class="fs-5">formação:</p>
+    <hr>
   </div>
 
     <!-- GRID - 3 COL -->
@@ -204,8 +210,8 @@
     </div>
     <!-- .GRID - 3 COL -->
 
-      <diV class="container" id="tempLivres"
-        <p class="fs-5">o que gosto de fazer no tempos livres:</p>
+      <diV class="container" id="tempLivres">  
+        <p class="fs-5">nos tempos livres:</p>
         <hr>
       </diV> 
 
@@ -213,9 +219,9 @@
     <div class="container mt-5">
       <div class="row" style="min-height:300px;">
         <!-- COL 1 -->
-        <div class="col">
+        <div class="col text-center">
           <p>os meus hobbies favoritos:</p>
-          <ul>
+          <ul id="hobUl">
             <li>desenhar ✏️</li>
             <li>ouvir música 🎧</li>
             <li>fazer colagens ✂️</li>
@@ -225,40 +231,70 @@
         </div>
         <!-- COL 2 -->
         <div class="col text-center">
-          <img src="img/markus-spiske-4PG6wLlVag4-unsplash.png">
+          <img id="changeImg" src="img/markus-spiske-4PG6wLlVag4-unsplash.png">
         </div>
         <!-- col3 -->
-        <div class="col text-center">
+        <div class="col text-center" >
           <div class="text-center">
             <ul id="jokeList">
             </ul>
           </div>
-        <div>
-            
+        </div>
+        <!-- col 4 -->
+        <div class="col">
+          <div class="colorBoxPlaceholder" >
+            <div class="colorOutBox">
+              <div id="allColors" >
+              </div>
+            </div>
+          </div>
+        
+
+
+
       </div>
     </div>
 
-    <div class="container">
+    <div class="container mb-5">
       <div class="row">
         <!-- col 1 -->
         <div class="col text-center">
-          <button class="btn btn-outline-primary">adiciona hobby</button>
+          <button id="changeImgBtn" class="btn btn-outline-secondary">adiciona hobby</button>
         </div>
         <!-- col 2 -->
         <div class="col text-center">
-          <button class="btn btn-outline-primary">muda a imagem</button>
+          <button class="btn btn-outline-secondary">muda a imagem</button>
         </div>
         <!-- col3 -->
         <div class="col text-center">
-          <button id="getJoke" class="btn btn-outline-primary">how is that sense of humor?</button>
+          <button id="getJoke" class="btn btn-outline-secondary">how is that sense of humor?</button>
         </div>
+        <!-- col4 -->
+         <div class="col text-center">
+          <div>
+          <!-- BUTTON ALEATORIO -->
+          <button id="corAbtn"  class="btn btn-outline-secondary"> 🌈 escolhe cor aleatória</button>
+        </div>
+
       </div>
     </div>
+<hr>
 
+<div style="display: flex;border: 1px solid red;align-items: center;justify-content: space-between;">
 
+  <div style="display: flex;" >
+    <p style="margin-right: 2rem;" >nome@email.pt </p>
+    <p style="margin-right: 2rem;"  >site.com </p>
+    <p style="margin-right: 2rem;"  >github</p>
+  </div>
+  <div style="display: flex;"  >
+    <p  style="margin-right: 2rem;">[portfolios carregados com sucesso: <span>0</span>] </p>
+    <button class="btn btn-outline-warning" style="display: flex;align-items: center;" > ✨📍✔️🔄️🚩🚀 reset</button>
+  </div>
 
+</div>
 
-    <div></div>
+  
 
   </body>
 </html>

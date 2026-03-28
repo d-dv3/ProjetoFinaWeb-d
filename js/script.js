@@ -18,6 +18,13 @@ prtForm.addEventListener("submit", function (event) {
   this.reset();
 });
 //
+// img to form:
+// find images https// ...  .jpg
+//
+//
+//
+
+//
 // API
 let askJokeBtn = document.getElementById("getJoke");
 let jokeList = document.getElementById("jokeList");
@@ -65,4 +72,45 @@ randomColorBtn.addEventListener("click", () => {
   console.log(rColor);
 
   colorsSpot.style.backgroundColor = rColor;
+});
+//
+//
+// CHANGE IMG
+
+// image.style.width = '150px';
+// image.style.borderRadius = '50%';
+
+// imageBtn.addEventListener("click", () => {
+
+// let imageBtn = document.getElementById("changeImgBtn");
+// let imgHob = document.getElementById("changeImg");
+
+//     if(imgHob.getAttribute("src") ==
+//         "img/markus-spiske-4PG6wLlVag4-unsplash.png") {
+
+//             imgHob.getAttribute("src") == "imag/austin-neill-hgO1wFPXl31-unsplash.jpg";
+
+//     }
+//         else if {
+//             imgHob.getAttribute("src") == "imag/
+//         }
+//         else {
+//           imgHob.getAttribute("src") == "imag/
+//         }
+// });
+//
+//
+
+//
+// ADD HOBBY
+let addBtn = document.getElementById("changeImgBtn");
+let hobList = document.getElementById("hobUl");
+
+addBtn.addEventListener("click", () => {
+  let outroHB = prompt("adiciona um hobby");
+  console.log(outroHB);
+
+  let newLi = document.createElement("li");
+  newLi.innerText = outroHB;
+  hobList.appendChild(newLi);
 });

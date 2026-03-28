@@ -28,6 +28,28 @@ ul {
   display: flex;
   justify-content: space-between;
 }
+
+.colorBoxPlaceholder {
+  display: flex;
+  justify-content: center;
+  margin-top: 50%;
+  margin-bottom: 50%;
+}
+.colorOutBox {
+  width: 46px;
+  height: 36px;
+  border: 6px solid grey;
+  border-radius: 4px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+#allColors {
+  width: 34px;
+  height: 24px;
+  padding-bottom: 6px;
+  border: 1px solid grey;
+}
 /* ── pill toggle button ── */
 #themeToggle {
   width: 3rem;
